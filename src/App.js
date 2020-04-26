@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div>
+    <div className="background">
       <h1>Upcoming Page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illo
