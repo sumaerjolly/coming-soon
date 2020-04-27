@@ -106,6 +106,7 @@ body {
   background-color: var(--dark-grey);
   min-height: calc(100vh - 100px);
   margin: 10px;
+  font-family: 'Helvetica';
 }
 
 *,
