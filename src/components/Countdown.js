@@ -5,8 +5,8 @@ function Countdown(props) {
   const initState = {
     days: 0,
     hours: 0,
-    minutess: 0,
-    secondss: 0
+    minutes: 0,
+    seconds: 0
   };
 
   const [state, setState] = useState(initState);
@@ -30,15 +30,30 @@ function Countdown(props) {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
-
+  // const test = Object.keys(state);
+  // // console.log(test);
+  // test.map((key, i) => {
+  //   // console.log(state.key);
+  //   // console.log(state.minutes);
+  // });
   return (
     <div className="countdown">
-      {Object.keys(state).map((key, i) => {
-        <div className="countdown-segment">
-          <span className="countdown-segment-number">{state.key}</span>
-          <span className="countdown-segment-caption">{key.toUpperCase()}</span>
-        </div>;
-      })}
+      <div className="countdown-segment">
+        <span className="countdown-segment-number">{state.days}</span>
+        <span className="countdown-segment-caption">DAYS</span>
+      </div>
+      <div className="countdown-segment">
+        <span className="countdown-segment-number">{state.hours}</span>
+        <span className="countdown-segment-caption">HOURS</span>
+      </div>
+      <div className="countdown-segment">
+        <span className="countdown-segment-number">{state.minutes}</span>
+        <span className="countdown-segment-caption">MINS</span>
+      </div>
+      <div className="countdown-segment">
+        <span className="countdown-segment-number">{state.seconds}</span>
+        <span className="countdown-segment-caption">SECS</span>
+      </div>
     </div>
   );
 }
