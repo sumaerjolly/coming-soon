@@ -38,46 +38,22 @@ function Countdown(props) {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div className="countdown">
-      {/* {Object.keys(state).map((time, i) => {
-        let show = state.time;
-        console.log(show);
+      {Object.keys(state).map((time, i) => {
         return (
           <div className="countdown-segment" key={i}>
             {}
-            <span className="countdown-segment-number">{show}</span>
+            <span className="countdown-segment-number">
+              {addZeroes(state[time])}
+            </span>
             <span className="countdown-segment-caption">
               {time.toUpperCase()}
             </span>
           </div>
         );
-      })} */}
-
-      <div className="countdown-segment">
-        <span className="countdown-segment-number">
-          {addZeroes(state.days)}
-        </span>
-        <span className="countdown-segment-caption">DAYS</span>
-      </div>
-      <div className="countdown-segment">
-        <span className="countdown-segment-number">
-          {addZeroes(state.hours)}
-        </span>
-        <span className="countdown-segment-caption">HOURS</span>
-      </div>
-      <div className="countdown-segment">
-        <span className="countdown-segment-number">
-          {addZeroes(state.minutes)}
-        </span>
-        <span className="countdown-segment-caption">MINS</span>
-      </div>
-      <div className="countdown-segment">
-        <span className="countdown-segment-number">
-          {addZeroes(state.seconds)}
-        </span>
-        <span className="countdown-segment-caption">SECS</span>
-      </div>
+      })}
     </div>
   );
 }
