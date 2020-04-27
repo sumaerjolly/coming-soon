@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/comingSoon.css';
 
 function App() {
   return (
