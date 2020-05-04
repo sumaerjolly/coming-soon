@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/comingSoon.css';
 import Countdown from './components/Countdown';
 
