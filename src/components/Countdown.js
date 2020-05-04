@@ -19,7 +19,7 @@ function Countdown(props) {
     return value;
   };
 
-  const setCountdown = () => {
+  const getCountdown = () => {
     const futureDate = moment(props.futureDate);
     const today = moment();
     const clockDuration = duration(futureDate.diff(today));
@@ -32,9 +32,9 @@ function Countdown(props) {
 
   // set interval when component mounts and clean up
   useEffect(() => {
-    setCountdown();
+    getCountdown();
     const interval = setInterval(() => {
-      setCountdown();
+      getCountdown();
     }, 1000);
     return () => clearInterval(interval);
   }, []);
