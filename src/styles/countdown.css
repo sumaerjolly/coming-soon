@@ -7,5 +7,40 @@
   justify-content: center;
 }
 
+.countdown div:not(:last-child) {
+  border-right: solid 2px var(--green);
+}
+
 .countdown-segment {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.countdown-segment-caption {
+  font-size: 16px;
+  font-weight: 500;
+}
+.countdown-segment-number {
+  font-size: 30px;
+  font-weight: 700;
+  transition: all 0.2s ease-in;
+}
+
+/* hover basic animation */
+
+.countdown-segment-number:hover {
+  transform: scale(1.2);
+}
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+  .countdown {
+    border-bottom: solid 5px var(--green);
+  }
+
+  .countdown div:not(:last-child) {
+    border-right: none;
+  }
 }
