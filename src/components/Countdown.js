@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import moment, { duration } from 'moment';
+import '../styles/countdown.css';
 
 function Countdown(props) {
   const initState = {

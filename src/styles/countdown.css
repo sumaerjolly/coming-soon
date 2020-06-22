@@ -1,0 +1,11 @@
+.countdown {
+  grid-area: countdown;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 150px));
+  grid-gap: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.countdown-segment {
+}

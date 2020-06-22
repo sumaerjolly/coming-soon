@@ -5,7 +5,7 @@ import Countdown from './components/Countdown';
 function App() {
   const initState = {
     countdown: {
-      futureDate: '2020-06-01 00:00:00'
+      futureDate: '2020-11-05 00:00:00'
     }
   };
   const [state, setState] = useState(initState);
